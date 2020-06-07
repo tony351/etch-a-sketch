@@ -1,6 +1,7 @@
 html, body {
     box-sizing: border-box;
-    height: 100%;
+    height: 90vh;
+
 }
 
 /* rearrange divs within container with flex-grid*/
@@ -20,7 +21,7 @@ html, body {
 /* give header color and padding */
 header {
     background-color: gray;
-    padding: 20px;
+    padding-top: 20px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -31,8 +32,8 @@ header {
 /* give footer color and padding */
 footer {
     background-color: gray;
-    padding: 20px;
-    position: fixed;
+    padding-bottom: 30px;
+    position: absolute;
     bottom: 0;
     width: 100%
 }
