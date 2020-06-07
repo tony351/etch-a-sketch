@@ -7,9 +7,11 @@ html, body {
 /* rearrange divs within container with flex-grid*/
 #container {
     display: grid;
-    margin-top: 80px;
+
     height: 95%;
-    justify-content: stretch;
+    width: 500px;	
+    margin: auto;
+    margin-top: 80px;
 }
 
 /* add border to each cell to make square*/
