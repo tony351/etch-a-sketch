@@ -1,0 +1,38 @@
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* rearrange divs within container with flex-grid*/
+#container {
+    display: grid;
+    margin-top: 80px;
+    height: 95%;
+    justify-content: stretch;
+}
+
+/* add border to each cell to make square*/
+.cell {
+    border: 1px solid black;
+}
+
+
+/* give header color and padding */
+header {
+    background-color: gray;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* give footer color and padding */
+footer {
+    background-color: gray;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
