@@ -1,3 +1,4 @@
+// grab container
 const container = document.querySelector('#container');
 
 //Creates divs based on number entered
@@ -13,17 +14,18 @@ function createGrid (length = 16,width = 16) {
 }
 
 //set hover effect so that grid divs change colors when mouse passes over
-/*
-const cells = document.querySelectorAll('.cell');
-cells.forEach((cell) => {
-    cell.addEventListener('mouseover', (e) => {
-            console.log(e)});
-});  */
-
-container.addEventListener('mouseover', function (e) {
+/*container.addEventListener('mouseover', function (e) {
     e.target.style.backgroundColor = "purple";
-});
-
+});*/
+function colorCells() {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell) => {
+        cell.addEventListener('mouseover', function (e)  {
+            cell.style.backgroundColor = "purple";
+            //console.log(e);
+        });
+    });
+}
 // Clear screen / the prompt user to resize 
 function clearScreen() {
     const cells = document.querySelectorAll('.cell');
@@ -37,12 +39,14 @@ function clearScreen() {
 function resize () {
     let numCells = prompt('How many squares per side do you want the new grid to be?');
     createGrid(numCells, numCells);
+
 }
 
-
+// on click, clear screen
 const clearBtn = document.querySelector('button');
 clearBtn.addEventListener('click', clearScreen)
 
 
 
 createGrid()
+colorCells()
