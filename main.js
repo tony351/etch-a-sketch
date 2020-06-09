@@ -13,10 +13,12 @@ function createGrid (length = 16,width = 16) {
     container.style.setProperty('grid-template-rows', 'repeat(' + length + ',1fr)');
 }
 
-//set hover effect so that grid divs change colors when mouse passes over
+
+// theres a bug with the event listener below that colors all the cells of container when hovering near the edge of the container
 /*container.addEventListener('mouseover', function (e) {
     e.target.style.backgroundColor = "purple";
 });*/
+//set hover effect so that grid divs change colors when mouse passes over
 function colorCells() {
     const cells = document.querySelectorAll('.cell');
     cells.forEach((cell) => {
@@ -33,6 +35,7 @@ function clearScreen() {
         cell.style.backgroundColor = "white";
     });
     resize();
+    colorCells();
 }
 
 // prompts the user to resize game
