@@ -3,6 +3,7 @@ const container = document.querySelector('#container');
 
 //Creates divs based on number entered
 function createGrid (length = 16,width = 16) {
+    container.innerHTML = "";
     for (i = 0; i < (length*width); i++) {
         let grid = document.createElement('div');
         grid.classList.add("cell");
