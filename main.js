@@ -35,6 +35,7 @@ function clearScreen() {
         cell.style.backgroundColor = "white";
     });
     resize();
+    // after resizing, apply mouseover color to all cells
     colorCells();
 }
 
